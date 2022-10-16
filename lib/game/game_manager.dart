@@ -1,11 +1,10 @@
 import 'dart:math';
 
 import 'package:flame/components.dart';
-import 'package:flame_project/game/scoreComponent.dart';
 import 'package:flame_project/sprite_component/cookie.dart';
 import 'package:flutter/material.dart';
 import '../common/background.dart';
-import '../common/button.dart';
+import '../common/menu_button.dart';
 import '../common/router.dart' as Route;
 import '../sprite_component/cookieBack.dart';
 
@@ -27,6 +26,7 @@ class GameManager extends Component with HasGameRef<Route.RouterGame> {
     add(_score);
     add(MainCookie(clickCookie));
     add(MenuButton());
+    //add(BackButton());
     cookieSpawn = Timer(limitSpawn, onTick: _spawnCookie, repeat: true);
     // add(Score());
   }

@@ -4,7 +4,7 @@ import 'package:flame/game.dart' as R;
 
 import '../game/game_manager.dart';
 import '../game/menu_game.dart';
-import '../game/menu_in_game.dart';
+import '../menu/menu_in_game.dart';
 
 class RouterGame extends R.FlameGame with HasTappableComponents {
   late final R.RouterComponent router;
@@ -15,7 +15,6 @@ class RouterGame extends R.FlameGame with HasTappableComponents {
       // definission des differentes routes de notre jeu
       router = R.RouterComponent(
         routes: {
-          'menu': R.Route(MenuPage.new),
           'home': R.Route(StartPage.new),
           'game': R.Route(GameManager.new)
           // 'pause': PauseRoute(),
